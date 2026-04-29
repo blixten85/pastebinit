@@ -1,0 +1,2 @@
+[console_scripts]
+pastebinit = pastebinit.cli:main
