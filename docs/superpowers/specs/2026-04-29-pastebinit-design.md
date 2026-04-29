@@ -7,7 +7,9 @@
 
 ## Overview
 
-A full rewrite of `pastebinit` from scratch — a command-line tool to send text/files to pastebin services. The original codebase (v1.6.2, GPL v2+) serves as inspiration for what to do and not do, not as source material. All original authors credited. The goal is a clean, modern Python package with full API integration per backend, encrypted credential storage, and a proper Debian package — suitable for submitting upstream to the original maintainers for adoption into Ubuntu/Debian official repositories.
+A full rewrite of `pastebinit` from scratch — a command-line tool to send text/files to pastebin services. The original codebase (v1.6.2, GPL v2+) serves as inspiration for what to do and not do, not as source material. All original authors credited. The goal is a clean, modern Python package with full API integration per backend, encrypted credential storage, and a proper Debian package — suitable for submitting upstream to Thomas Ward (current Debian maintainer, teward@ubuntu.com) for adoption into Ubuntu/Debian official repositories.
+
+**Upstream status (verified 2026-04-29):** Actively maintained. Latest upstream: 1.8.0 (2025-11-30). This rewrite starts at **v2.0.0** — above all existing versions, no conflict. Key changes in 1.8.0 we incorporate: `argparse` instead of `getopt`, default backend `bpa.st`, OpenSUSE support, cleaned import structure.
 
 ---
 
@@ -31,7 +33,9 @@ pastebinit/
 │       ├── paste_debian_net.py  # paste.debian.net — XML-RPC
 │       ├── paste_ubuntu_com.py  # paste.ubuntu.com — HTTP POST
 │       ├── sprunge.py           # sprunge.us — HTTP POST
-│       └── paste_opendev.py     # paste.opendev.org — REST API
+│       ├── paste_opendev.py     # paste.opendev.org — REST API
+│       ├── bpa_st.py            # bpa.st — default in upstream 1.8.0+
+│       └── paste_opensuse.py    # paste.opensuse.org — OpenSUSE distro default
 ├── tests/
 │   ├── test_cli.py
 │   ├── test_syntax.py
@@ -104,6 +108,8 @@ class BasePastebin(ABC):
 | paste.ubuntu.com | ❌ | ❌ | ❌ | ✅ | ✅ | HTTP POST |
 | sprunge.us | ❌ | ❌ | ❌ | ❌ | ✅ | HTTP POST |
 | paste.opendev.org | ✅ | ❌ | ✅ | ✅ | ✅ | REST |
+| bpa.st | ❌ | ❌ | ✅ | ✅ | ✅ | HTTP POST |
+| paste.opensuse.org | ❌ | ❌ | ✅ | ✅ | ✅ | HTTP POST |
 
 ### pastebin.com (full treatment)
 
