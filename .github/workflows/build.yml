@@ -63,4 +63,4 @@ jobs:
           DEB=$(ls ../pastebinit_*.deb | head -1)
           gh release upload ${{ github.event.release.tag_name }} "$DEB"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
