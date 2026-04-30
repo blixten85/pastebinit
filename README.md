@@ -4,6 +4,7 @@
 [![License](https://img.shields.io/badge/license-GPL--2.0%2B-blue)](LICENSE)
 [![Build](https://github.com/blixten85/pastebinit/actions/workflows/build.yml/badge.svg)](https://github.com/blixten85/pastebinit/actions/workflows/build.yml)
 [![CodeQL](https://github.com/blixten85/pastebinit/actions/workflows/codeql.yml/badge.svg)](https://github.com/blixten85/pastebinit/actions/workflows/codeql.yml)
+[![CodeRabbit](https://img.shields.io/coderabbit/prs/github/blixten85/pastebinit)](https://coderabbit.ai)
 
 Send text and files to pastebin services from the command line.
 
