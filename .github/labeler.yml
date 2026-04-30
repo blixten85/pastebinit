@@ -1,0 +1,15 @@
+ci:
+  - changed-files:
+    - any-glob-to-any-file: '.github/**'
+
+documentation:
+  - changed-files:
+    - any-glob-to-any-file: ['**.md', 'debian/pastebinit.1']
+
+dependencies:
+  - changed-files:
+    - any-glob-to-any-file: 'pyproject.toml'
+
+debian:
+  - changed-files:
+    - any-glob-to-any-file: 'debian/**'

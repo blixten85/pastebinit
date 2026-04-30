@@ -1,0 +1,34 @@
+_pastebinit() {
+    local cur prev opts backends
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    opts="--backend --title --format --private --expiry --folder --create-folder
+          --echo --verbose --username --login --logout --list-backends --version --help"
+    backends="pastebin.com dpaste.com paste.debian.net paste.ubuntu.com
+              sprunge.us paste.opendev.org bpa.st paste.opensuse.org"
+
+    case "$prev" in
+        -b|--backend)
+            COMPREPLY=( $(compgen -W "$backends" -- "$cur") )
+            return 0 ;;
+        -p|--private)
+            COMPREPLY=( $(compgen -W "0 1 2" -- "$cur") )
+            return 0 ;;
+        -e|--expiry)
+            COMPREPLY=( $(compgen -W "N 10M 1H 1D 1W 2W 1M 6M 1Y" -- "$cur") )
+            return 0 ;;
+        -f|--format)
+            COMPREPLY=( $(compgen -W "auto text python javascript typescript rust go java c cpp
+                          csharp ruby php swift kotlin bash powershell html5 css json yaml
+                          xml sql markdown lua" -- "$cur") )
+            return 0 ;;
+    esac
+
+    if [[ "$cur" == -* ]]; then
+        COMPREPLY=( $(compgen -W "$opts" -- "$cur") )
+    else
+        COMPREPLY=( $(compgen -f -- "$cur") )
+    fi
+}
+complete -F _pastebinit pastebinit

@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pastebinit"
+version = "2.0.0"
+description = "Send text and files to pastebin services from the command line"
+readme = "README.md"
+license = { text = "GPL-2.0-or-later" }
+authors = [
+  { name = "Anders Eriksson", email = "36226327+blixten85@users.noreply.github.com" },
+]
+requires-python = ">=3.10"
+dependencies = [
+  "cryptography>=41",
+  "keyring>=24",
+  "tomli-w>=1.0",
+  "tomli>=2.0; python_version < '3.11'",
+]
+
+[project.scripts]
+pastebinit = "pastebinit.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/blixten85/pastebinit"
+"Bug Tracker" = "https://github.com/blixten85/pastebinit/issues"
+"Original Project" = "https://launchpad.net/pastebinit"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pastebinit*"]

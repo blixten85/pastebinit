@@ -1,0 +1,69 @@
+.TH PASTEBINIT 1 "2026-04-29" "2.0.0" "User Commands"
+.SH NAME
+pastebinit \- send data to a pastebin service
+.SH SYNOPSIS
+.B pastebinit
+[\fIOPTIONS\fR] [\fIFILE\fR...]
+.SH DESCRIPTION
+\fBpastebinit\fR reads from standard input or files and sends the content
+to a pastebin service, printing the resulting URL.
+.SH OPTIONS
+.TP
+.BI \-b " backend"
+Backend to use. Default: bpa.st.
+.TP
+.BI \-t " title"
+Paste title.
+.TP
+.BI \-f " format"
+Syntax format. Default: auto-detect from file extension.
+.TP
+.BI \-p " 0|1|2"
+Privacy: 0=public, 1=unlisted, 2=private.
+.TP
+.BI \-e " code"
+Expiry: N 10M 1H 1D 1W 2W 1M 6M 1Y.
+.TP
+.BI \-\-folder " name"
+Upload to named folder (pastebin.com).
+.TP
+.B \-\-create\-folder
+Create folder if it does not exist.
+.TP
+.B \-\-login
+Login and save credentials (encrypted).
+.TP
+.B \-\-logout
+Clear saved credentials for backend.
+.TP
+.B \-l, \-\-list\-backends
+List all supported backends with capabilities.
+.TP
+.B \-E, \-\-echo
+Print pasted content to stdout.
+.TP
+.B \-V, \-\-verbose
+Verbose output to stderr.
+.TP
+.B \-\-version
+Print version and exit.
+.SH CONFIGURATION
+.B ~/.config/pastebinit/config.toml
+.br
+.B ~/.config/pastebinit/keystore
+(encrypted credentials)
+.SH ENVIRONMENT
+.TP
+.B PASTEBIN_API_KEY
+pastebin.com developer API key.
+.TP
+.B PASTEBIN_USERNAME
+Username override.
+.TP
+.B PASTEBIN_PASSWORD
+Password override.
+.SH AUTHORS
+Anders Eriksson.
+Originally written by Stéphane Graber and Daniel Bartlett.
+.SH SEE ALSO
+.BR curl (1)
