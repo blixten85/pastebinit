@@ -1,0 +1,14 @@
+pastebinit (2.0.0-1) unstable; urgency=medium
+
+  * Complete rewrite as a modern Python package.
+  * Add full pastebin.com REST API: login, folders, syntax, expiry, privacy.
+  * Add encrypted credential storage (Fernet/PBKDF2 + OS keyring).
+  * Add automatic syntax detection from file extension and shebang line.
+  * Add backends: dpaste.com, paste.debian.net (XML-RPC), paste.ubuntu.com,
+    sprunge.us, paste.opendev.org, bpa.st, paste.opensuse.org.
+  * Switch to argparse CLI with --login, --folder, --create-folder.
+  * Switch to TOML configuration (~/.config/pastebinit/config.toml).
+  * Credits: Stéphane Graber <stgraber@ubuntu.com> (original author),
+    Daniel Bartlett <dan@f-box.org> (co-author).
+
+ -- Anders Eriksson <36226327+blixten85@users.noreply.github.com>  Tue, 29 Apr 2026 12:00:00 +0200

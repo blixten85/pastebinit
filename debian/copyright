@@ -1,0 +1,20 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: pastebinit
+Upstream-Contact: Anders Eriksson <36226327+blixten85@users.noreply.github.com>
+Source: https://github.com/blixten85/pastebinit
+
+Files: *
+Copyright:
+  2007-2022 Stéphane Graber <stgraber@ubuntu.com>
+  2007-2010 Daniel Bartlett <dan@f-box.org>
+  2026 Anders Eriksson <36226327+blixten85@users.noreply.github.com>
+License: GPL-2.0+
+
+License: GPL-2.0+
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation; either version 2 of the License, or
+ (at your option) any later version.
+ .
+ On Debian systems, the complete text of the GNU General Public
+ License version 2 can be found in /usr/share/common-licenses/GPL-2.

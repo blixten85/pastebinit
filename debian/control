@@ -1,0 +1,29 @@
+Source: pastebinit
+Section: utils
+Priority: optional
+Maintainer: Anders Eriksson <36226327+blixten85@users.noreply.github.com>
+Build-Depends: debhelper-compat (= 13), dh-python, python3-all
+Standards-Version: 4.6.2
+Homepage: https://github.com/blixten85/pastebinit
+Vcs-Browser: https://github.com/blixten85/pastebinit
+Vcs-Git: https://github.com/blixten85/pastebinit.git
+
+Package: pastebinit
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends},
+ python3-cryptography,
+ python3-keyring,
+ python3-tomli-w
+Suggests: python3-keyring-gnome, python3-magic
+Description: send data to a pastebin from the command line
+ pastebinit reads from standard input or files and sends the content
+ to a pastebin service, printing the resulting URL. Supports
+ pastebin.com (full API: login, folders, syntax highlighting),
+ paste.debian.net (XML-RPC), dpaste.com, paste.ubuntu.com,
+ sprunge.us, paste.opendev.org, bpa.st, and paste.opensuse.org.
+ .
+ Features: automatic syntax detection from file extension and shebang,
+ encrypted credential storage (Fernet/PBKDF2 or OS keyring), folder
+ management on pastebin.com, and configurable defaults via TOML.
+ .
+ Originally written by Stéphane Graber and Daniel Bartlett.
