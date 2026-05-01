@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.1.2](https://github.com/blixten85/pastebinit/compare/v2.1.1...v2.1.2) (2026-05-01)
+
+
+### Bug Fixes
+
+* build.yml added build-essential ([3d3d70b](https://github.com/blixten85/pastebinit/commit/3d3d70b5880f17805da05521d6dd9933d2ecc336))
+* replace GHCR_TOKEN with GITHUB_TOKEN for auto-merge ([8e76b9a](https://github.com/blixten85/pastebinit/commit/8e76b9ad88dcf1aa3ab75ee55c6eca6c6e7791ed))
+* use github.token for dependabot auto-merge ([3d8bd79](https://github.com/blixten85/pastebinit/commit/3d8bd7975ad3715e1f48beaf5a0cb23cafe57730))
+
 ## [2.1.1](https://github.com/blixten85/pastebinit/compare/v2.1.0...v2.1.1) (2026-05-01)
 
 
