@@ -7,6 +7,8 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  checks: read
+  statuses: read
 
 jobs:
   dependabot:
@@ -44,8 +46,29 @@ jobs:
     runs-on: ubuntu-latest
     if: startsWith(github.head_ref, 'release-please--')
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Wait for required checks
+        run: |
+          echo "Waiting for required checks to complete..."
+          while true; do
+            CHECK_STATUS=$(gh pr checks "$PR_URL" --json state --jq '.[].state' | grep -v COMPLETED || true)
+            if [ -z "$CHECK_STATUS" ]; then
+              echo "All checks completed"
+              break
+            fi
+            echo "Waiting for checks: $CHECK_STATUS"
+            sleep 10
+          done
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
       - name: Merge release PR
-        run: gh pr merge --admin --squash --delete-branch "$PR_URL"
+        run: |
+          HEAD_SHA=$(gh pr view "$PR_URL" --json headRefOid --jq '.headRefOid')
+          gh pr merge "$PR_URL" --admin --squash --delete-branch --match-head-commit "$HEAD_SHA"
         env:
           PR_URL: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
