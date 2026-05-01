@@ -2,20 +2,31 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+Only the latest stable release and the current development branch receive security updates. Older versions are not supported.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| Version           | Supported          |
+| ----------------- | ------------------ |
+| Latest release    | :white_check_mark: |
+| main branch       | :white_check_mark: |
+| < latest release  | :x:                |
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+If you discover a security vulnerability in pastebinit, please report it responsibly.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+**Please do not open a public GitHub issue.** Instead, report it privately through GitHub's Security Advisory system:
+
+1. Go to the **Security** tab in this repository
+2. Click **Report a vulnerability**
+3. Fill out the advisory form with as much detail as possible
+
+Alternatively, you can use GitHub's private vulnerability reporting feature if enabled.
+
+### What to expect
+
+- **Acknowledgment:** You will receive an initial response within 5 business days confirming receipt of your report.
+- **Updates:** We aim to provide status updates at least every 2 weeks as we investigate and work on a fix.
+- **Decision:** If the vulnerability is accepted, we will develop and release a fix, then coordinate public disclosure. You will be credited as the reporter unless you prefer to remain anonymous.
+- **Declined:** If the report is declined, we will explain why and may suggest alternative steps.
+
+We greatly appreciate responsible disclosure and the effort you put into keeping pastebinit secure.
