@@ -2,6 +2,13 @@
 
 Structured changelog entries are maintained automatically by Release Please from the existing `v2.3.7` baseline onward. Releases `v2.1.3` through `v2.3.7` remain available in the GitHub Releases history.
 
+## [2.4.3](https://github.com/Avkroken/Pastebinit/compare/v2.4.2...v2.4.3) (2026-09-06)
+
+
+### Fixes
+
+* align issue classification caller contract ([#219](https://github.com/Avkroken/Pastebinit/issues/219)) ([811a476](https://github.com/Avkroken/Pastebinit/commit/811a4760d31dcb7cadc088f74672ca7de853b6cd))
+
 ## [2.4.2](https://github.com/Avkroken/Pastebinit/compare/v2.4.1...v2.4.2) (2026-09-05)
 
 
