@@ -1,12 +1,14 @@
 # REPO.md
 
-`pastebinit` is a Python project with tests under `tests/` and Debian packaging under `debian/`.
+`Pastebinit` är ett Python-projekt med tester under `tests/` och Debian-paketering under `debian/`.
 
-## Validation
+## Invarians
 
-- Read `pyproject.toml`, affected tests and relevant Debian packaging files before changing related behavior.
-- Run relevant pytest/compile/build checks for the changed area.
-- When `debian/` or Debian package generation changes, run the repository's Debian packaging validation.
-- `pyproject.toml` is the package version source; version `MAJOR.MINOR.PATCH` must match stable release tag `vMAJOR.MINOR.PATCH`.
-- The default-branch ruleset currently requires the `python` check. Do not rename it without updating and verifying that ruleset in the same migration.
-- Pin third-party GitHub Actions and shared reusable workflows to full commit SHAs.
+- `pyproject.toml` är källa till sanning för paketversionen.
+- Versionen `MAJOR.MINOR.PATCH` ska matcha stabil release-tagg `vMAJOR.MINOR.PATCH`.
+
+## Validering
+
+- Läs `pyproject.toml`, berörda tester och relevanta Debian-filer innan relaterat beteende ändras.
+- Kör relevanta pytest-, compile- och build-kontroller för den ändrade delen.
+- När `debian/` eller Debian-paketgenerering ändras, kör förrådets Debian-validering.
