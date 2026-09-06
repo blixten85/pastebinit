@@ -2,6 +2,13 @@
 
 Structured changelog entries are maintained automatically by Release Please from the existing `v2.3.7` baseline onward. Releases `v2.1.3` through `v2.3.7` remain available in the GitHub Releases history.
 
+## [2.4.4](https://github.com/Avkroken/Pastebinit/compare/v2.4.3...v2.4.4) (2026-09-06)
+
+
+### Documentation
+
+* förenkla REPO.md på svenska ([#224](https://github.com/Avkroken/Pastebinit/issues/224)) ([03fe73b](https://github.com/Avkroken/Pastebinit/commit/03fe73bd18e247e9250b4e4fb56049a376a5b051))
+
 ## [2.4.3](https://github.com/Avkroken/Pastebinit/compare/v2.4.2...v2.4.3) (2026-09-06)
 
 
